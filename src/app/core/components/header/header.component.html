@@ -6,8 +6,22 @@
         <a href="#">Hello Pierre!</a>
       </li>
       <li>
-        <a href="#"><i class="large material-icons">account_circle</i></a>
+        <a class="waves-effect waves-light modal-trigger" (click)="openModal()">
+          <i class="large material-icons">account_circle</i>
+        </a>
       </li>
     </ul>
   </div>
 </nav>
+
+<div id="modalLogin" class="modal modal-fixed-footer" materialize="modal"
+     [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+  <div class="modal-content">
+    <h4>Connexion</h4>
+    <p>...</p>
+  </div>
+  <div class="modal-footer">
+    <a class="waves-effect waves-green btn-flat" (click)="closeModal()">Annuler</a>
+    <a class="modal-action modal-close waves-effect waves-green btn-flat">Se connecter</a>
+  </div>
+</div>
